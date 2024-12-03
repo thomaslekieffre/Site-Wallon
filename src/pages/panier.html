@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Votre panier - Lycée Henri Wallon</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles/panier.css" />
+</head>
+
+<body>
+    <div class="menu-overlay"></div>
+    <header>
+        <div class="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="left">
+            <a href="/"><img src="/logo-wallon.png" alt="Logo du lycée Henri-Wallon de Valenciennes." /></a>
+            <ul class="nav-links">
+                <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
+                <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
+                <li><a href="./contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./panier.html" class="active"><ion-icon name="bag-handle-outline"></ion-icon>Votre
+                        panier</a></li>
+                <li><a href="./login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><ion-icon name="sunny-outline"></ion-icon></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h1>Votre panier</h1>
+
+        <div class="cart-content">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="/product1.png" alt="Produit" />
+                    <div class="item-details">
+                        <div class="item-header">
+                            <h3>Nom du produit</h3>
+                            <button class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <p>Référence : xxxxx</p>
+                        <p>Couleur : [couleur]</p>
+                        <p>Taille : S</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input" />
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Remises :</span>
+                    <button class="add-discount">Ajouter</button>
+                </div>
+                <div class="summary-line">
+                    <span>Sous-total :</span>
+                    <span>XX.XX€</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total :</span>
+                    <span>XX.XX€</span>
+                </div>
+                <button class="validate-order">
+                    <ion-icon name="mail-outline" style="color: white"></ion-icon>
+                    Valider la commande
+                </button>
+                <p class="order-note">La validation vous permettra d'obtenir un bon de commande à présenter le jour de
+                    la récupération de votre commande.</p>
+                <p class="payment-note">Le paiement aura lieu en chèque ou en espèce au même moment.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cart-footer">
+        <div class="footer-content">
+            <div class="contact">
+                <h3>Contact :</h3>
+                <ul>
+                    <li><ion-icon name="mail-outline"></ion-icon><a
+                            href="mailto:maildulycee@gmail.com">maildulycee@gmail.com</a></li>
+                    <li><ion-icon name="logo-instagram"></ion-icon><a href="https://instagram.com/insta">@insta</a></li>
+                    <li><ion-icon name="game-controller-outline"></ion-icon><a href="#">nsicorp-lien</a></li>
+                    <li><ion-icon name="call-outline"></ion-icon><span>03 *****</span></li>
+                </ul>
+            </div>
+            <img src="/logo-wallon.png" alt="Logo Henri Wallon" class="footer-logo" />
+        </div>
+    </footer>
+
+    <script src="/src/pages/scripts/theme.js"></script>
+    <script src="./panier.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

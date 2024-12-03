@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Lycée Henri Wallon</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+</head>
+
+<body>
+    <header>
+        <div class="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="left">
+            <a href="/"><img src="/logo-wallon.png" alt="Logo du lycée Henri-Wallon de Valenciennes." /></a>
+            <ul class="nav-links">
+                <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
+                <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
+                <li><a href="/contact" class="active"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
+                <li><a href="./login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><ion-icon name="sunny-outline"></ion-icon></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        <div class="contact-content">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5090.342905475836!2d3.5179850770216676!3d50.36335739363032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2edc441763c5b%3A0x4de5666a6bd319cc!2sLYCEE%20WALLON!5e0!3m2!1sfr!2sfr!4v1733242564251!5m2!1sfr!2sfr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-info">
+                <div class="logo-container">
+                    <ion-icon name="school-outline"></ion-icon>
+                    <h2>Le lycée Henri Wallon</h2>
+                </div>
+                <p class="address">16 Pl. de la République,<br>59300 Valenciennes</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <div class="contact">
+                <h3>Contact :</h3>
+                <ul>
+                    <li><ion-icon name="mail-outline"></ion-icon><a
+                            href="mailto:maildulycee@gmail.com">maildulycee@gmail.com</a></li>
+                    <li><ion-icon name="logo-instagram"></ion-icon><a href="https://instagram.com/insta">@insta</a></li>
+                    <li><ion-icon name="game-controller-outline"></ion-icon><a href="#">nsicorp-lien</a></li>
+                    <li><ion-icon name="call-outline"></ion-icon><span>03 *****</span></li>
+                </ul>
+            </div>
+            <img src="/logo-wallon.png" alt="Logo Henri Wallon" class="footer-logo" />
+        </div>
+    </footer>
+
+    <script src="/src/pages/scripts/theme.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription - Lycée Henri Wallon</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+</head>
+
+<body>
+    <header>
+        <div class="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="left">
+            <a href="/"><img src="/logo-wallon.png" alt="Logo du lycée Henri-Wallon de Valenciennes." /></a>
+            <ul class="nav-links">
+                <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
+                <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
+                <li><a href="./contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
+                <li><a href="/login" class="active"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><ion-icon name="sunny-outline"></ion-icon></li>
+            </ul>
+        </div>
+    </header>
+    <main class="auth-container">
+        <div class="auth-content">
+            <div class="auth-form">
+                <h2>Bienvenue parmi nous !</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" placeholder="Martin" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" placeholder="Matin" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="alex@wallon.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="classe">Classe</label>
+                        <input type="text" id="classe" placeholder="1e G2" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <div class="password-input">
+                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required />
+                            <button type="button" class="toggle-password">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">S'inscrire</button>
+                </form>
+                <p class="auth-switch">
+                    Vous avez déjà un compte ? <a href="./login.html">Se connecter ici</a>
+                </p>
+            </div>
+            <div class="auth-image">
+                <img src="../../login.png" alt="Illustration du lycée" />
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/src/pages/scripts/theme.js"></script>
+
+</body>
+
+</html>
