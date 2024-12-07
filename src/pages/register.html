@@ -33,25 +33,33 @@
                 <h2>Bienvenue parmi nous !</h2>
                 <form>
                     <div class="form-group">
+                        <label for="prenom">Nom d'utilisateur</label>
+                        <input type="text" id="username" placeholder="Matheux" required autocomplete/>
+                    </div>
+                    <div class="form-group">
                         <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" placeholder="Martin" required />
+                        <input type="text" id="firstName" placeholder="Martin" required autocomplete/>
                     </div>
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" id="nom" placeholder="Matin" required />
+                        <input type="text" id="lastName" placeholder="Matin" required autocomplete/>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="alex@wallon.com" required />
+                        <input type="email" id="email" placeholder="alex@wallon.com" required autocomplete/>
+                    </div>
+                    <div class="form-group">
+                        <label for="classe">Niveau</label>
+                        <input type="text" id="level" placeholder="Première" required autocomplete/>
                     </div>
                     <div class="form-group">
                         <label for="classe">Classe</label>
-                        <input type="text" id="classe" placeholder="1e G2" required />
+                        <input type="number" min="0" id="classe" placeholder="1e G2" required autocomplete/>
                     </div>
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
                         <div class="password-input">
-                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required />
+                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required autocomplete/>
                             <button type="button" class="toggle-password">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </button>
@@ -72,6 +80,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/src/pages/scripts/theme.js"></script>
+    <script src="/src/pages/scripts/register.js"></script>
 
 </body>
 

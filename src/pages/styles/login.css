@@ -163,3 +163,12 @@ input:checked + .checkmark:after {
   padding: 1rem;
   border-radius: 4px;
 }
+
+.login-success {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(0, 175, 0);
+  border: 1px solid rgb(0, 175, 0);
+  padding: 1rem;
+  border-radius: 4px;
+}
