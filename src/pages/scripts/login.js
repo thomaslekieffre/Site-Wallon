@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const loginError = document.querySelector(".login-error");
             loginError.hidden = false;
             loginError.innerHTML = "Error : " + response.content;
+        } else {
+            window.location = "/index.html";
         }
     });
 });
