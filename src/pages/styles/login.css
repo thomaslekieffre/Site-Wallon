@@ -50,7 +50,7 @@
 .form-group input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 4px;
 }
 
@@ -63,10 +63,19 @@
   right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  background: var(--card-bg);
   border: none;
-  color: #666;
+  border-radius: 12px;
   cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.toggle-password:hover {
+  opacity: 0.8;
 }
 
 .checkbox-container {
