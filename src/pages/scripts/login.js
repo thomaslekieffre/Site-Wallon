@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await login_request(email, password);
         console.log(response);
 
-        // login error
+        // login Reponses
         const loginError = document.querySelector(".login-error");
         const loginSuccess = document.querySelector(".login-success");
         if (response.status != 200) {
             loginError.hidden = false;
             loginSuccess.hidden = true;
-            loginError.innerHTML = "Error : " + response.content;
+            loginError.innerHTML = "<b>Error : </b>" + response.content;
         } else {
             loginError.hidden = true;
             loginSuccess.hidden = false;

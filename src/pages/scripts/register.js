@@ -29,7 +29,20 @@ authForm.addEventListener("submit", async event => {
 
     // console.log(username, email, password, firstName, lastName, level, classe)
 
-    const authResponse = await register_request(username, email, password, firstName, lastName, level, classe);
+    const response = await register_request(username, email, password, firstName, lastName, level, classe);
 
-    console.log(authResponse);
+    console.log(response);
+
+    // Auth Reponses
+    const registerError = document.querySelector(".register-error");
+    const registerSuccess = document.querySelector(".register-success");
+    if (response.status != 201) {
+        registerError.hidden = false;
+        registerSuccess.hidden = true;
+        registerError.innerHTML = `<b>Errors :</b><br>${response.content.join('<br>')}`;
+    } else {
+        registerError.hidden = true;
+        registerSuccess.hidden = false;
+        registerSuccess.innerHTML = "Register successful";
+    }
 })
