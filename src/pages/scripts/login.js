@@ -24,16 +24,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // login Reponses
         const loginError = document.querySelector(".login-error");
-        const loginSuccess = document.querySelector(".login-success");
         if (response.status != 200) {
             loginError.hidden = false;
-            loginSuccess.hidden = true;
             loginError.innerHTML = "<b>Error : </b>" + response.content;
         } else {
             loginError.hidden = true;
-            loginSuccess.hidden = false;
             loginSuccess.innerHTML = response.content;
-            window.location = "/index.html";
+            window.location = "/index.html?registered=true";
         }
     });
 });
