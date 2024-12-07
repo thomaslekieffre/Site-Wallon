@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             loginError.hidden = true;
             loginSuccess.hidden = false;
             loginSuccess.innerHTML = response.content;
+            window.location = "/index.html";
         }
     });
 });
