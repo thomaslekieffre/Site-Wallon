@@ -5,7 +5,9 @@ async function login_request(email, password) {
     const response = await fetch('http://localhost:3000/api/v1/auth/login', {
         method: 'POST',
         body: formData,
+        credentials: 'include',
     });
+    
     const data = await response.json();
 
     return data;

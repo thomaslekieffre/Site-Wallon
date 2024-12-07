@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function getProducts_request() {
   const response = await fetch('http://localhost:3000/api/v1/products', {
     method: 'GET',
+    credentials: 'include',
   });
   const data = await response.json();
   return data;
