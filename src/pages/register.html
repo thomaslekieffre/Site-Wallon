@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div class="menu-overlay"></div>
     <header>
         <div class="burger-menu">
             <ion-icon name="menu-outline"></ion-icon>
@@ -19,10 +20,12 @@
             <a href="/"><img src="/logo-wallon.png" alt="Logo du lycée Henri-Wallon de Valenciennes." /></a>
             <ul class="nav-links">
                 <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
-                <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
-                <li><a href="./contact.html" class="active"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
-                <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
-                <li><a href="./login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><a href="/src/pages/products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
+                <li><a href="/src/pages/contact.html"><ion-icon
+                            name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="/src/pages/panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a>
+                </li>
+                <li><a href="/src/pages/login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
                 <li><ion-icon name="sunny-outline"></ion-icon></li>
             </ul>
         </div>
@@ -51,7 +54,8 @@
                     </div>
                     <div class="form-group">
                         <label for="level">Niveau</label>
-                        <input type="text" id="level" placeholder="Première" required autocomplete="organization-title" />
+                        <input type="text" id="level" placeholder="Première" required
+                            autocomplete="organization-title" />
                     </div>
                     <div class="form-group">
                         <label for="classe">Classe</label>
@@ -60,7 +64,8 @@
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
                         <div class="password-input">
-                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required autocomplete="new-password" />
+                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required
+                                autocomplete="new-password" />
                             <button type="button" class="toggle-password">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </button>
@@ -74,7 +79,7 @@
                     Vous avez déjà un compte ? <a href="./login.html">Se connecter ici</a>
                 </p>
             </div>
-            
+
             <div class="auth-image">
                 <img src="../../login.png" alt="Illustration du lycée" />
             </div>
