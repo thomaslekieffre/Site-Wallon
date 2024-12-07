@@ -20,49 +20,61 @@
             <ul class="nav-links">
                 <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
                 <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
-                <li><a href="./contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./contact.html" class="active"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
                 <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
-                <li><a href="/login" class="active"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><a href="./login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
                 <li><ion-icon name="sunny-outline"></ion-icon></li>
             </ul>
         </div>
     </header>
+
     <main class="auth-container">
         <div class="auth-content">
             <div class="auth-form">
                 <h2>Bienvenue parmi nous !</h2>
                 <form>
                     <div class="form-group">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" placeholder="Martin" required />
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" placeholder="Matheux" required autocomplete="username" />
                     </div>
                     <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" placeholder="Matin" required />
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" placeholder="Martin" required autocomplete="given-name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" placeholder="Matin" required autocomplete="family-name" />
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="alex@wallon.com" required />
+                        <input type="email" id="email" placeholder="alex@wallon.com" required autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="level">Niveau</label>
+                        <input type="text" id="level" placeholder="Première" required autocomplete="organization-title" />
                     </div>
                     <div class="form-group">
                         <label for="classe">Classe</label>
-                        <input type="text" id="classe" placeholder="1e G2" required />
+                        <input type="text" id="classe" placeholder="1e G2" required autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
                         <div class="password-input">
-                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required />
+                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required autocomplete="new-password" />
                             <button type="button" class="toggle-password">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </button>
                         </div>
                     </div>
                     <button type="submit" class="submit-btn">S'inscrire</button>
+                    <div class="register-error" hidden></div>
+                    <div class="register-success" hidden></div>
                 </form>
                 <p class="auth-switch">
                     Vous avez déjà un compte ? <a href="./login.html">Se connecter ici</a>
                 </p>
             </div>
+            
             <div class="auth-image">
                 <img src="../../login.png" alt="Illustration du lycée" />
             </div>
@@ -73,6 +85,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/src/pages/scripts/theme.js"></script>
     <script src="/src/pages/scripts/password-toggle.js"></script>
+    <script src="/src/pages/scripts/register.js"></script>
+
 </body>
 
 </html>

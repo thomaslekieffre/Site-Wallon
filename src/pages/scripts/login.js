@@ -7,7 +7,7 @@ async function login_request(email, password) {
         body: formData,
     });
     const data = await response.json();
-    
+
     return data;
 }
 
@@ -18,14 +18,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         const email = loginForm.querySelector("#email").value;
         const password = loginForm.querySelector("#password").value;
         const response = await login_request(email, password);
+        console.log(response);
 
-        // login error
+        // login Reponses
+        const loginError = document.querySelector(".login-error");
+        const loginSuccess = document.querySelector(".login-success");
         if (response.status != 200) {
-            const loginError = document.querySelector(".login-error");
             loginError.hidden = false;
-            loginError.innerHTML = "Error : " + response.content;
+            loginSuccess.hidden = true;
+            loginError.innerHTML = "<b>Error : </b>" + response.content;
         } else {
-            window.location = "/index.html";
+            loginError.hidden = true;
+            loginSuccess.hidden = false;
+            loginSuccess.innerHTML = response.content;
         }
     });
 });

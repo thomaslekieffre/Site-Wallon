@@ -20,9 +20,9 @@
             <ul class="nav-links">
                 <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
                 <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
-                <li><a href="./contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./contact.html" class="active"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
                 <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
-                <li><a href="/login" class="active"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
+                <li><a href="./login.html"><ion-icon name="person-outline"></ion-icon>Connexion</a></li>
                 <li><ion-icon name="sunny-outline"></ion-icon></li>
             </ul>
         </div>
@@ -38,12 +38,12 @@
                 <form>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="alex@wallon.com" required />
+                        <input type="email" id="email" placeholder="alex@wallon.com" required autocomplete="on"/>
                     </div>
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
                         <div class="password-input">
-                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required />
+                            <input type="password" id="password" placeholder="Entrez votre mot de passe" required autocomplete="on" />
                             <button type="button" class="toggle-password">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </button>
@@ -58,6 +58,7 @@
 
                         <button type="submit" class="submit-btn">Se connecter</button>
                         <div class="login-error" hidden></div>
+                        <div class="login-success" hidden></div>
                 </form>
 
                 <p class="auth-switch">

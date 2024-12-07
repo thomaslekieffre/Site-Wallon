@@ -33,14 +33,6 @@ async function getProducts_request() {
   return data;
 }
 
-async function getProductImage_request(product_name, image_id) {
-  const response = await fetch(`http://localhost:3000/api/v1/images?product_name=product_name&image_id=image_id`, {
-    method: 'GET',
-  });
-  const data = await response.json();
-  return data;
-}
-
 
 document.addEventListener("DOMContentLoaded", async () => {
   const productsGrid = document.querySelector(".products-grid");
