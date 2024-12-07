@@ -1,0 +1,235 @@
+html {
+    scroll-behavior: smooth; 
+}
+.parallax {
+  background-image: url("../media/lycee.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body{
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;      
+    background-color: Antiquewhite;   
+}
+ .container {
+     text-align: center;
+ }
+p{
+	text-align: top;
+	font-family: "Georgia", Serif;
+}
+h1{
+	font-family: "copperplat", fantasy;
+}
+h3 {
+	font-family: "Georgia", Serif;
+}
+.logo {
+    position: relative;
+    top: -353px; 
+    right: -1201px;
+    z-index: 1000;
+    }
+ /*for "image container" starts from here*/          
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teeshirt {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: 3px;
+    left: 0px;
+}
+
+/*Till here is the image container for T-shirt*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mugg {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -25px;
+    left: 0px;
+}
+
+/*end of the the detail thingy for the mug*/
+/*start of the pull details*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pull2 {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -30px;
+    right: 0px;
+}
+
+/*end of the pull thing*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;/*meu on the top*/
+  width: 100%;/*takes the whole space on the top that it is given.*/
+  top: 0;/*position is on the top*/
+  z-index: 990;/*ensures it keeps the thingy above*/
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li a {/*styles specific anchor(tag"<a>", includes tag "href") elements within a structured list.*/
+  color: white;
+  text-decoration: none;
+  padding: 10px;/*Padding is the space between the content of an element and its border. */
+  transition: background 0.3s;
+}/*time that the transition takes*/
+
+ul li a:hover {/*powerful way to style hyperlinks*/
+  background-color: #444;
+}
+/*start teeshirt11*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teeshirt11 {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -25px;
+    right: 0px;
+}
+
+/*finish teeshirt11*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.teeshirt44 {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -100px;
+    left: -100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pull3 {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -500px;
+    left: 230px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chausP {
+   width: 300px; 
+    height: auto;
+    position: relative; 
+    top: -325px;
+    left: 0px;
+}
+.Lesnp {
+    position:relative;
+    top: -330px;
+    z-index:2000;
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Menu styles for smaller screens */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+ /*flex-direction is a CSS property used in flex containers to define the direction of flex items. It has four values:
+"row": Arranges items horizontally from left to right (default).
+"row-reverse": Arranges items horizontally from right to left.
+"column": Arranges items vertically from top to bottom.
+"column-reverse": Arranges items vertically from bottom to top.*/
+  .menu {
+    display: none;
+    flex-direction: row;/*So here, the items are horizontally from right to left*/
+    width: 100%;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+    }
+.userpassinput {
+    position:relative;
+    top: -200px;
+    z-index: 10;
+}
+.footer {
+     background-color: black; 
+     color: white; 
+     text-align: center; 
+     padding: 20px; 
+     width: 100%; 
+     margin-top: auto; 
+}
+.footertext {
+    color: white;
+}

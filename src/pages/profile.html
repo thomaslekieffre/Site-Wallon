@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - Lycée Henri Wallon</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+</head>
+
+<body>
+    <header>
+        <div class="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="left">
+            <a href="/"><img src="/logo-wallon.png" alt="Logo du lycée Henri-Wallon de Valenciennes." /></a>
+            <ul class="nav-links">
+                <li><a href="/"><ion-icon name="home-outline"></ion-icon>Accueil</a></li>
+                <li><a href="./products.html"><ion-icon name="pricetag-outline"></ion-icon>Produits</a></li>
+                <li><a href="./contact.html"><ion-icon name="call-outline"></ion-icon>Contact</a></li>
+                <li><a href="./panier.html"><ion-icon name="bag-handle-outline"></ion-icon>Votre panier</a></li>
+                <li><a href="/profile" class="active"><ion-icon name="person-outline"></ion-icon>Mon Profil</a></li>
+                <li><ion-icon name="sunny-outline"></ion-icon></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-content">
+            <div class="profile-header">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <h2>Martin Matin</h2>
+                <p class="user-info">1e G2 • alex@wallon.com</p>
+            </div>
+
+            <div class="profile-sections">
+                <section class="orders-section">
+                    <h3><ion-icon name="bag-check-outline"></ion-icon>Mes commandes</h3>
+                    <div class="order-placeholder">
+                        <p>Aucune commande pour le moment</p>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h3><ion-icon name="settings-outline"></ion-icon>Paramètres</h3>
+                    <div class="settings-options">
+                        <button class="settings-btn">
+                            <ion-icon name="create-outline"></ion-icon>
+                            Modifier le profil
+                        </button>
+                        <button class="settings-btn">
+                            <ion-icon name="key-outline"></ion-icon>
+                            Changer le mot de passe
+                        </button>
+                        <button class="settings-btn logout">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                            Se déconnecter
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="/src/pages/scripts/theme.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+  background-color: Antiquewhite;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.logo{
+    position: fixed; 
+    top: 2px;
+    right: 0px;
+    z-index: 1000;
+}
+.table1 {
+    margin:0 auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 0px;
+    padding: 10px;
+    text-align: center;
+}
+.teeshirtf3{
+    width: 100%;
+    height: auto;
+}
+.teeshirth1{
+    width: 75%;
+    height: auto;
+}
+.mug3 {
+    width: 25%;
+    height: auto;
+}
+.mug4{
+    width: 25%;
+    height: auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 990;
+}
+ul {
+    display: flex;
+  list-style: none;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  align-items: left; 
+  padding: 10px;
+  transition: background 0.3s;
+}
+ul li a:hover {
+  background-color: #444;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+    
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.menu.active {
+    display: flex;
+  }
+
+ul {
+    flex-direction: column;
+  }
+
+ul li {
+    text-align: center;
+    padding: 10px 0;
+}
+   }
+.footer1 {
+     background-color: black; 
+     color: white; 
+     text-align: center; 
+     padding: 10px; 
+     width: 99%; 
+     margin-top: auto; 
+}
+
+
+

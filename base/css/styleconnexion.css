@@ -1,0 +1,83 @@
+	* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body{
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;      
+    background-color: antiquewhite;   
+}
+ form{
+	text-align: center;
+ }
+p{
+	text-align: top, center;
+	font-family: "Georgia", Serif;
+}
+h1{
+	font-family: "copperplat", fantasy;
+}
+h3 {
+	font-family: "Georgia", Serif;
+}
+.logo {
+    position: relative;
+    top: -353px; 
+    right: -1201px;
+    z-index: 1000;
+}
+.menu {
+    display: flex;
+    flex-direction: row;/*So here, the items are horizontally from right to left*/
+    width: 100%;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed;/*menu on the top*/
+  width: 100%;/*takes the whole space on the top that it is given.*/
+  top: 0;/*position is on the top*/
+  z-index: 990;/*ensures it keeps the thingy above*/
+
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li a {/*styles specific anchor(tag"<a>", includes tag "href") elements within a structured list.*/
+  color: white;
+  text-decoration: none;
+  padding: 10px;/*Padding is the space between the content of an element and its border. */
+  transition: background 0.3s;
+}/*time that the transition takes*/
+
+ul li a:hover {/*powerful way to style hyperlinks*/
+  background-color: #444;
+}
+/*start teeshirt11*/
+.footer {
+     background-color: black; 
+     color: white; 
+     text-align: center; 
+     padding: 20px; 
+     width: 100%; 
+     margin-top: auto; 
+}
+.footertext {
+    color: white;
+}

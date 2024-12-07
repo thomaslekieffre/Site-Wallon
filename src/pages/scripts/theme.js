@@ -16,9 +16,11 @@ themeToggle.addEventListener("click", () => {
 });
 
 function updateThemeIcon(theme) {
-  const icon = document.querySelector('ion-icon[name="sunny-outline"]');
+  const icon = document.querySelector(
+    'ion-icon[name="sunny-outline"], ion-icon[name="moon-outline"]'
+  );
   icon.setAttribute(
     "name",
-    theme === "light" ? "sunny-outline" : "moon-outline"
+    theme === "light" ? "moon-outline" : "sunny-outline"
   );
 }
