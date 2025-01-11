@@ -1,48 +1,91 @@
-async function register_request(username, email, password, firstName, lastName, level, classe) {
-    const formData = new FormData();
-    formData.append('username', username);
-    formData.append('email', email);
-    formData.append('password', password);
-    formData.append('firstName', firstName);
-    formData.append('lastName', lastName);
-    formData.append('level', level);
-    formData.append('classe', classe);
-    const response = await fetch(`http://localhost:3000/api/v1/auth/register`, {
-        method: 'POST',
-        body: formData,
-    });
-    const data = await response.json();
-    return data;
- }
- 
-const authForm = document.querySelector(".auth-form");
-authForm.addEventListener("submit", async event => {
+// Utility function to handle API request errors
+function handleRequestError(response) {
+    if (!response.ok) {
+        return response.json().then(errData => {
+            throw new Error(errData.content || 'Unknown error occurred');
+        });
+    }
+    return response.json();
+}
+
+// Utility function to validate form input
+function validateFormInput(fields) {
+    for (const [key, value] of Object.entries(fields)) {
+        if (!value.trim()) {
+            return `Field "${key}" is required.`;
+        }
+    }
+    return null;
+}
+
+// Register request with JSON payload
+async function registerRequest(data) {
+    try {
+        const response = await fetch('http://localhost:3000/api/v1/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',  // Send as JSON
+            },
+            body: JSON.stringify(data),  // Convert data to JSON string
+        });
+
+        return await handleRequestError(response);  // Handle possible errors
+    } catch (error) {
+        return { status: 'error', content: error.message };  // Return error message if request fails
+    }
+}
+
+// Form submit handler
+async function handleSubmit(event) {
     event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const level = document.getElementById("level").value;
-    const classe = document.getElementById("classe").value;
+    const form = event.target;
+    const data = {
+        username: form.querySelector('#username').value,
+        email: form.querySelector('#email').value,
+        password: form.querySelector('#password').value,
+        firstName: form.querySelector('#firstName').value,
+        lastName: form.querySelector('#lastName').value,
+        level: form.querySelector('#level').value,
+        classe: form.querySelector('#classe').value
+    };
 
-    // console.log(username, email, password, firstName, lastName, level, classe)
+    // Validate input
+    const validationError = validateFormInput(data);
+    if (validationError) {
+        displayError(validationError);
+        return;
+    }
 
-    const response = await register_request(username, email, password, firstName, lastName, level, classe);
+    // Call the register request function
+    const response = await registerRequest(data);
 
-    console.log(response);
+    if (response.status === 'error') {
+        displayError(response.content);  // Display error message
+    } else {
+        displaySuccess("Registration successful");  // Display success message
+    }
+}
 
-    // Auth Reponses
+// Display error message
+function displayError(message) {
     const registerError = document.querySelector(".register-error");
     const registerSuccess = document.querySelector(".register-success");
-    if (response.status != 201) {
-        registerError.hidden = false;
-        registerSuccess.hidden = true;
-        registerError.innerHTML = `<b>Errors :</b><br>${response.content.join('<br>')}`;
-    } else {
-        registerError.hidden = true;
-        registerSuccess.hidden = false;
-        registerSuccess.innerHTML = "Register successful";
-    }
-})
+
+    registerSuccess.hidden = true;
+    registerError.hidden = false;
+    registerError.innerHTML = `<b>Errors :</b><br>${message}`;
+}
+
+// Display success message
+function displaySuccess(message) {
+    const registerError = document.querySelector(".register-error");
+    const registerSuccess = document.querySelector(".register-success");
+
+    registerError.hidden = true;
+    registerSuccess.hidden = false;
+    registerSuccess.innerHTML = message;
+}
+
+// Add event listener for form submit
+document.querySelector(".auth-form").addEventListener("submit", handleSubmit);
