@@ -31,25 +31,11 @@
     </header>
 
     <main class="cart-container">
+        
         <h1>Votre panier</h1>
 
         <div class="cart-content">
             <div class="cart-items">
-                <div class="cart-item">
-                    <img src="/product1.png" alt="Produit" />
-                    <div class="item-details">
-                        <div class="item-header">
-                            <h3>Nom du produit</h3>
-                            <button class="delete-btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                        <p>Référence : xxxxx</p>
-                        <p>Couleur : [couleur]</p>
-                        <p>Taille : S</p>
-                        <p>Quantité : 1</p>
-                    </div>
-                </div>
             </div>
 
             <div class="cart-summary">
@@ -58,14 +44,10 @@
                     <button class="add-discount">Ajouter</button>
                 </div>
                 <div class="summary-line">
-                    <span>Sous-total :</span>
-                    <span>XX.XX€</span>
-                </div>
-                <div class="summary-line total">
                     <span>Total :</span>
-                    <span>XX.XX€</span>
+                    <span class="total">XX.XX</span>€
                 </div>
-                <button class="validate-order">
+                <button class="validate-order" onclick="validateCommand();">
                     <ion-icon name="mail-outline" style="color: white"></ion-icon>
                     Valider la commande
                 </button>
@@ -93,7 +75,7 @@
     </footer>
 
     <script src="/src/pages/scripts/theme.js"></script>
-    <script src="./panier.js"></script>
+    <script type="module" src="/src/pages/scripts/panier.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
